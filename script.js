@@ -7,14 +7,16 @@ function add() {
 
     console.log(name, proffession, age);
 
-
+//   *********ALERT********
     if (name === '' || proffession === '' || age === '') {
         const m = document.getElementById('m')
         m.style.color = 'red';
 
         m.innerHTML = 'Error : Please Make sure All the fields are filled before adding in an employee !'
         m.style.marginLeft = '30px';
-    } else {
+        table.style.display = 'none';
+    } 
+    else {
         m.innerHTML = 'Success : Employee Added!'
         m.style.color = 'green';
         m.style.marginLeft = '30px';
@@ -30,6 +32,7 @@ function add() {
             age: age,})
     }
 
+    //********TABLE**************
     let list = document.getElementById('list')
     list.innerHTML = '';
 
