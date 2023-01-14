@@ -14,7 +14,6 @@ function add() {
 
         m.innerHTML = 'Error : Please Make sure All the fields are filled before adding in an employee !'
         m.style.marginLeft = '30px';
-        table.style.display = 'none';
     } 
     else {
         m.innerHTML = 'Success : Employee Added!'
@@ -53,7 +52,7 @@ function add() {
     })
 
 }
-
+// ************** DELETION*************
 function d(el) {
     delete l[el]
     list.innerHTML = ''
