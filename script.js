@@ -40,7 +40,7 @@ function add() {
         list.innerHTML += `
         <tbody>
         <tr>
-        <td>${i+1}.</td>
+        <td>id:${i+1}.</td>
         <td>Name:${el.name}</td>
         <td>Profession:${el.proffession}</td>
         <td>Age:${el.age}</td>
@@ -53,15 +53,19 @@ function add() {
 
 }
 // ************** DELETION*************
-function d(el) {
-    delete l[el]
+let removeUser;
+function d(i) {
+    removeUser = l.splice(i, 1);
+    console.log(removeUser);
+
     list.innerHTML = ''
+    console.log(l)
     l.map((el, i)=> {
 
         list.innerHTML += `
         <tbody>
         <tr>
-        <td>${i+1}.</td>
+        <td>id:${i+1}.</td>
         <td>Name:${el.name}</td>
         <td>Profession:${el.proffession}</td>
         <td>Age:${el.age}</td>
